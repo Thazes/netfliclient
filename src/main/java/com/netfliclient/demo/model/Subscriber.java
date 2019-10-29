@@ -1,27 +1,36 @@
 package com.netfliclient.demo.model;
 
 public class Subscriber {
-    private int subscriberid;
-    private int subscribername;
+    private int id;
+    private String name;
+    private int idNumber;
 
-    public Subscriber(int subscriberid, int subscribername) {
-        this.subscriberid = subscriberid;
-        this.subscribername = subscribername;
+    public Subscriber(String name, int idNumber) {
+        this.name = name;
+        this.idNumber = idNumber;
     }
 
-    public int getSubscriberid() {
-        return subscriberid;
+    public int getId() {
+        return id;
     }
 
-    public void setSubscriberid(int subscriberid) {
-        this.subscriberid = subscriberid;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public int getSubscribername() {
-        return subscribername;
+    public String getName() {
+        return name;
     }
 
-    public void setSubscribername(int subscribername) {
-        this.subscribername = subscribername;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getIdNumber() {
+        return idNumber;
+    }
+
+    public void setIdNumber(int idNumber) {
+        this.idNumber = idNumber;
     }
 }
