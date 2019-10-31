@@ -2,12 +2,12 @@ package com.netfliclient.demo.model;
 
 public class Subscriber {
     private int id;
-    private String name;
-    private int idNumber;
+    private String identificationNumber;
+    private String fullName;
 
-    public Subscriber(String name, int idNumber) {
-        this.name = name;
-        this.idNumber = idNumber;
+    public Subscriber(String identificationNumber, String fullName) {
+        this.identificationNumber = identificationNumber;
+        this.fullName = fullName;
     }
 
     public int getId() {
@@ -18,19 +18,19 @@ public class Subscriber {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getIdentificationNumber() {
+        return identificationNumber;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setIdentificationNumber(String identificationNumber) {
+        this.identificationNumber = identificationNumber;
     }
 
-    public int getIdNumber() {
-        return idNumber;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setIdNumber(int idNumber) {
-        this.idNumber = idNumber;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 }

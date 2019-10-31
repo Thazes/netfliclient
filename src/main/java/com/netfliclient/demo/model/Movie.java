@@ -1,20 +1,21 @@
 package com.netfliclient.demo.model;
 
+import java.util.List;
+
 public class Movie {
     private int id;
-    private int yearofRelease;
-    private String movieName;
-    private String contentOwner;
-    private String classification;  //category
-    private String type;            //original or suggested
+    private String name;
+    private String type;
+    private String yearOfRelease;
+    private Subscriber contentOwner;
+    private List<Category> categories;
 
-    public Movie(int id, int yearofRelease, String movieName, String contentOwner, String classification, String type) {
-        this.id = id;
-        this.yearofRelease = yearofRelease;
-        this.movieName = movieName;
-        this.contentOwner = contentOwner;
-        this.classification = classification;
+    public Movie(String name, String type, String yearOfRelease, Subscriber contentOwner, List<Category> categories) {
+        this.name = name;
         this.type = type;
+        this.yearOfRelease = yearOfRelease;
+        this.contentOwner = contentOwner;
+        this.categories = categories;
     }
 
     public int getId() {
@@ -25,36 +26,12 @@ public class Movie {
         this.id = id;
     }
 
-    public int getYearofRelease() {
-        return yearofRelease;
+    public String getName() {
+        return name;
     }
 
-    public void setYearofRelease(int yearofRelease) {
-        this.yearofRelease = yearofRelease;
-    }
-
-    public String getMovieName() {
-        return movieName;
-    }
-
-    public void setMovieName(String movieName) {
-        this.movieName = movieName;
-    }
-
-    public String getContentOwner() {
-        return contentOwner;
-    }
-
-    public void setContentOwner(String contentOwner) {
-        this.contentOwner = contentOwner;
-    }
-
-    public String getClassification() {
-        return classification;
-    }
-
-    public void setClassification(String classification) {
-        this.classification = classification;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getType() {
@@ -63,5 +40,29 @@ public class Movie {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getYearOfRelease() {
+        return yearOfRelease;
+    }
+
+    public void setYearOfRelease(String yearOfRelease) {
+        this.yearOfRelease = yearOfRelease;
+    }
+
+    public Subscriber getContentOwner() {
+        return contentOwner;
+    }
+
+    public void setContentOwner(Subscriber contentOwner) {
+        this.contentOwner = contentOwner;
+    }
+
+    public List<Category> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(List<Category> categories) {
+        this.categories = categories;
     }
 }
