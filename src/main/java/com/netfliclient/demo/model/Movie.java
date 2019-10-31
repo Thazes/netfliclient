@@ -10,6 +10,8 @@ public class Movie {
     private Subscriber contentOwner;
     private List<Category> categories;
 
+    public Movie() {}
+
     public Movie(String name, String type, String yearOfRelease, Subscriber contentOwner, List<Category> categories) {
         this.name = name;
         this.type = type;

@@ -5,6 +5,9 @@ public class Subscriber {
     private String identificationNumber;
     private String fullName;
 
+    public Subscriber() {
+    }
+
     public Subscriber(String identificationNumber, String fullName) {
         this.identificationNumber = identificationNumber;
         this.fullName = fullName;

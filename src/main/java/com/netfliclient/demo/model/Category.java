@@ -4,6 +4,8 @@ public class Category {
     private int id;
     private String categoryName;
 
+    public Category(){}
+
     public Category(String categoryName) {
         this.categoryName = categoryName;
     }
