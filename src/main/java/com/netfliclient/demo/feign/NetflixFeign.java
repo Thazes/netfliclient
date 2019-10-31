@@ -35,4 +35,7 @@ public interface NetflixFeign {
     @RequestMapping(method = RequestMethod.PATCH, value = "subscribers/{identificationNumber}/movies/{movieId}")
     Movie updateMovie(@PathVariable String identificationNumber, @PathVariable Long movieId, @RequestBody MovieSuggestion movieSuggestion);
 
+    @RequestMapping(method = RequestMethod.DELETE, value = "subscribers/{identificationNumber}/movies/{movieId}")
+    void deleteMovie(@PathVariable String identificationNumber, @PathVariable Long movieId);
+
 }

@@ -25,7 +25,7 @@ public class NetflixRunner implements CommandLineRunner {
         String[] movieTypes = new String[]{"suggested", "original"};
         // Register Subscriber
         Subscriber latestAccount = netflixFeign.newSubscriber(
-                new Subscriber("331245", "Hello From The Other Side")
+                new Subscriber("331247", "Hello From The Other Side")
         );
 
         System.out.println("Latest Account: " + latestAccount.toString());
@@ -83,6 +83,10 @@ public class NetflixRunner implements CommandLineRunner {
         );
 
         System.out.println("Updated Movie: " + updatedMovie.toString());
+
+        // Delete the updated movie
+        netflixFeign.deleteMovie(latestAccount.getIdentificationNumber(), Integer.toUnsignedLong(suggestedMovie.getId()));
+        System.out.println("This movie was deleted");
 
     }
 }
