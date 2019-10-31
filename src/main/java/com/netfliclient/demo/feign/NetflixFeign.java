@@ -23,7 +23,7 @@ public interface NetflixFeign {
     @RequestMapping(method = RequestMethod.GET, value = "movies")
     List<Movie> allMovies();
 
-    @RequestMapping(method = RequestMethod.GET, value = "movies/{categoryId}?type={movieType}")
+    @RequestMapping(method = RequestMethod.GET, value = "categories/{categoryId}/movies?type={movieType}")
     List<Movie> categoryMovies(@PathVariable Long categoryId, @PathVariable String movieType);
 
     @RequestMapping(method = RequestMethod.POST, value = "subscribers/{identificationNumber}/movies")
